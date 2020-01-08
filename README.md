@@ -2,7 +2,19 @@
 
 ## Installation
 
-The StyleCI SDK requires [PHP](https://php.net) 7.2.5 or higher. Download `styleci.phar` from the [releases page](https://github.com/StyleCI/CLI/releases/latest), and put it in you faviouite location for bin files (alongside composer), removing the `.phar` from the filename.
+The StyleCI SDK requires [PHP](https://php.net) 7.2.5 or higher. Download `styleci.phar` from the [releases page](https://github.com/StyleCI/CLI/releases/latest), and put it in your favourite location for bin files (alongside composer), removing the `.phar` from the filename.
+
+### For \*NIX
+
+The above steps as commands you can run in terminal:
+```bash
+# For both installation and update
+curl -SsLo ~/styleci.phar https://github.com/StyleCI/CLI/releases/latest/download/styleci.phar
+
+# Once after installation
+chmod +x ~/styleci.phar && sudo ln -s ~/styleci.phar /usr/local/bin/styleci
+```
+
 
 ## Usage
 
