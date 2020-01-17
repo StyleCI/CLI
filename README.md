@@ -1,5 +1,7 @@
 # StyleCI CLI Tool
 
+![StyleCI Banner](https://user-images.githubusercontent.com/2829600/72653462-e6dd0e80-3982-11ea-8d12-9cc1e5057af1.jpg)
+
 ## Installation
 
 The StyleCI CLI Tool requires [PHP](https://php.net) 7.2.5 or higher. Download `styleci.phar` from the [releases page](https://github.com/StyleCI/CLI/releases/latest), and put it in your favourite location for bin files (alongside composer), removing the `.phar` from the filename.
