@@ -13,6 +13,9 @@
         "ext-json": "*",
         "ext-zlib": "*"
     },
+    "suggest": {
+        "ext-curl": "Required for high performance HTTP transport",
+    },
     "bin": [
         "bin/styleci"
     ],
