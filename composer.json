@@ -13,6 +13,12 @@
         "ext-json": "*",
         "ext-zlib": "*"
     },
+    "bin": [
+        "bin/styleci"
+    ],
+    "config": {
+        "preferred-install": "dist"
+    },
     "extra": {
         "bin-dir": "bin"
     }
