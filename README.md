@@ -4,10 +4,28 @@
 
 ## Installation
 
-The StyleCI CLI Tool requires [PHP](https://php.net) 7.2.5 or higher. Download `styleci.phar` from the [releases page](https://github.com/StyleCI/CLI/releases/latest), and put it in your favourite location for bin files (alongside composer), removing the `.phar` from the filename.
+The StyleCI CLI Tool requires [PHP](https://php.net) 7.2.5 or higher, and can be installer either by using Composer, or directly downloading the phar.
+
+### Require using Composer
+
+Local installation:
 
 ```bash
-$ curl -SsLo styleci.phar https://github.com/StyleCI/CLI/releases/download/v0.4.2/styleci.phar \
+$ composer require styleci/cli:^0.5
+```
+
+Global installation:
+
+```bash
+$ composer global require styleci/cli:^0.5
+```
+
+### Download the Phar
+
+Global installation:
+
+```bash
+$ curl -SsLo styleci.phar https://github.com/StyleCI/CLI/releases/download/v0.5.0/styleci.phar \
     && chmod +x styleci.phar && sudo mv styleci.phar /usr/local/bin/styleci
 ```
 
@@ -18,7 +36,7 @@ Now, you can analyze any local copy of a repo enabled in StyleCI, from the conso
 ### StyleCI for GitHub
 
 ```bash
-$ STYLECI_GITHUB_API_KEY=YOUR-API-KEY-GOES-HERE styleci analyze
+$ STYLECI_GITHUB_API_KEY=YOUR-API-KEY-GOES-HERE styleci
 ```
 
 > Your API key is available at https://github.styleci.io/profile.
@@ -26,7 +44,7 @@ $ STYLECI_GITHUB_API_KEY=YOUR-API-KEY-GOES-HERE styleci analyze
 ### StyleCI for GitLab
 
 ```bash
-$ STYLECI_GITLAB_API_KEY=YOUR-API-KEY-GOES-HERE styleci analyze
+$ STYLECI_GITLAB_API_KEY=YOUR-API-KEY-GOES-HERE styleci
 ```
 
 > Your API key is available at https://gitlab.styleci.io/profile.
@@ -34,7 +52,7 @@ $ STYLECI_GITLAB_API_KEY=YOUR-API-KEY-GOES-HERE styleci analyze
 ### StyleCI for Bitbucket
 
 ```bash
-$ STYLECI_BITBUCKET_API_KEY=YOUR-API-KEY-GOES-HERE styleci analyze
+$ STYLECI_BITBUCKET_API_KEY=YOUR-API-KEY-GOES-HERE styleci
 ```
 
 > Your API key is available at https://bitbucket.styleci.io/profile.
@@ -49,7 +67,7 @@ You can optionally pass a directory to analyze, otherwise, the current working d
 
 ```
 Usage:
-  analyze [options] [--] [<directory>]
+  styleci [options] [--] [<directory>]
 
 Arguments:
   directory
@@ -67,3 +85,7 @@ Options:
   -n, --no-interaction           Do not ask any interactive question
   -v|vv|vvv, --verbose           Increase the verbosity of messages
 ```
+
+## License
+
+This tool is licensed under [The Apache License 2.0](LICENSE).

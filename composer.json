@@ -1,0 +1,19 @@
+{
+    "name": "styleci/cli",
+    "description": "The CLI tool for StyleCI",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "StyleCI",
+            "email": "support@styleci.io"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "ext-json": "*",
+        "ext-zlib": "*"
+    },
+    "extra": {
+        "bin-dir": "bin"
+    }
+}
