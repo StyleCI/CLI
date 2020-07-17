@@ -11,7 +11,7 @@ The StyleCI CLI Tool requires [PHP](https://php.net) 7.2.5 or higher, and can be
 Local installation:
 
 ```bash
-$ composer require styleci/cli:^0.5
+$ composer require --dev styleci/cli:^0.5
 ```
 
 Global installation:
