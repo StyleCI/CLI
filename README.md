@@ -11,13 +11,13 @@ The StyleCI CLI Tool requires [PHP](https://php.net) 7.2.5 or higher, and can be
 Local installation:
 
 ```bash
-$ composer require --dev styleci/cli:^0.5
+$ composer require --dev styleci/cli:^0.5.1
 ```
 
 Global installation:
 
 ```bash
-$ composer global require styleci/cli:^0.5
+$ composer global require styleci/cli:^0.5.1
 ```
 
 ### Download the Phar
@@ -25,7 +25,7 @@ $ composer global require styleci/cli:^0.5
 Global installation:
 
 ```bash
-$ curl -SsLo styleci.phar https://github.com/StyleCI/CLI/releases/download/v0.5.0/styleci.phar \
+$ curl -SsLo styleci.phar https://github.com/StyleCI/CLI/releases/download/v0.5.1/styleci.phar \
     && chmod +x styleci.phar && sudo mv styleci.phar /usr/local/bin/styleci
 ```
 
