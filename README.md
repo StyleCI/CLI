@@ -38,8 +38,8 @@ When using the tool for the first time, you may want to enter your StyleCI API k
 ```
 styleci config auth.github YOUR-API-KEY-GOES-HERE
 ```
-> Your API key is available at https://bitbucket.styleci.io/profile.
 
+> Your API key is available at https://github.styleci.io/profile.
 
 #### StyleCI for GitLab:
 
@@ -55,7 +55,7 @@ styleci config auth.gitlab YOUR-API-KEY-GOES-HERE
 styleci config auth.bitbucket YOUR-API-KEY-GOES-HERE
 ```
 
-> Your API key is available at https://github.styleci.io/profile.
+> Your API key is available at https://bitbucket.styleci.io/profile.
 
 
 ## Usage
