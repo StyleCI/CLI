@@ -11,13 +11,13 @@ The StyleCI CLI Tool requires [PHP](https://php.net) 7.2.5 or higher, and can be
 Local installation:
 
 ```bash
-$ composer require --dev styleci/cli:^0.5.1
+$ composer require styleci/cli:^0.6 --dev
 ```
 
 Global installation:
 
 ```bash
-$ composer global require styleci/cli:^0.5.1
+$ composer global require styleci/cli:^0.6
 ```
 
 ### Download the Phar
@@ -25,41 +25,70 @@ $ composer global require styleci/cli:^0.5.1
 Global installation:
 
 ```bash
-$ curl -SsLo styleci.phar https://github.com/StyleCI/CLI/releases/download/v0.5.1/styleci.phar \
+$ curl -SsLo styleci.phar https://github.com/StyleCI/CLI/releases/download/v0.6.0/styleci.phar \
     && chmod +x styleci.phar && sudo mv styleci.phar /usr/local/bin/styleci
 ```
 
+## First Time Setup
+
+When using the tool for the first time, you may want to enter your StyleCI API keys. You can do this with the `styleci config` command, which will store your keys in `~/.styleci/config.json`, just like how Composer store keys.
+
+#### StyleCI for GitHub:
+
+```
+styleci config auth.github YOUR-API-KEY-GOES-HERE
+```
+> Your API key is available at https://bitbucket.styleci.io/profile.
+
+
+#### StyleCI for GitLab:
+
+```
+styleci config auth.gitlab YOUR-API-KEY-GOES-HERE
+```
+
+> Your API key is available at https://gitlab.styleci.io/profile.
+
+#### StyleCI for Bitbucket:
+
+```
+styleci config auth.bitbucket YOUR-API-KEY-GOES-HERE
+```
+
+> Your API key is available at https://github.styleci.io/profile.
+
+
 ## Usage
 
-Now, you can analyze any local copy of a repo enabled in StyleCI, from the console!
+Now, you can analyze any local copy of a repo enabled in StyleCI, from the console! Simply run:
 
-### StyleCI for GitHub
+```bash
+$ styleci
+```
+
+and StyleCI will analyze your current directory.
+
+### Environment Variables
+
+If you have chosen not use the first time setup config, or would like to temporarily override the stored keys, this can be done by setting environment variables.
+
+#### StyleCI for GitHub:
 
 ```bash
 $ STYLECI_GITHUB_API_KEY=YOUR-API-KEY-GOES-HERE styleci
 ```
 
-> Your API key is available at https://github.styleci.io/profile.
-
-### StyleCI for GitLab
+#### StyleCI for GitLab:
 
 ```bash
 $ STYLECI_GITLAB_API_KEY=YOUR-API-KEY-GOES-HERE styleci
 ```
 
-> Your API key is available at https://gitlab.styleci.io/profile.
-
-### StyleCI for Bitbucket
+#### StyleCI for Bitbucket:
 
 ```bash
 $ STYLECI_BITBUCKET_API_KEY=YOUR-API-KEY-GOES-HERE styleci
 ```
-
-> Your API key is available at https://bitbucket.styleci.io/profile.
-
-### API Key Storage
-
-You may want to set this environment variable more permanent in practice, such as by exporting it in your `~/.zprofile` file.
 
 ### Advanced Usage
 
@@ -67,7 +96,7 @@ You can optionally pass a directory to analyze, otherwise, the current working d
 
 ```
 Usage:
-  styleci [options] [--] [<directory>]
+  analyze [options] [--] [<directory>]
 
 Arguments:
   directory
@@ -85,6 +114,8 @@ Options:
   -n, --no-interaction           Do not ask any interactive question
   -v|vv|vvv, --verbose           Increase the verbosity of messages
 ```
+
+Note that `styleci` is shorthand for `styleci analyze`. This will matter if you want to analyze a directory with relevative path `config`, or any other command name. You will need to write `styleci analyze config` in order to use such a `<directory>` argument.
 
 ## License
 
