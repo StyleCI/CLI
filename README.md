@@ -4,7 +4,7 @@
 
 ## Installation
 
-The StyleCI CLI Tool requires [PHP](https://php.net) 7.2.5 or higher, and can be installer either by using Composer, or directly downloading the phar.
+The StyleCI CLI Tool requires [PHP](https://php.net) 7.2.5 or higher, and can be installed either by using [Composer](https://getcomposer.org/), or directly downloading the phar.
 
 ### Require using Composer
 
