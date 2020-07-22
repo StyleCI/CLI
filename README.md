@@ -57,6 +57,7 @@ styleci config auth.bitbucket YOUR-API-KEY-GOES-HERE
 
 > Your API key is available at https://bitbucket.styleci.io/profile.
 
+
 ## Usage
 
 Now, you can analyze any local copy of a repo enabled in StyleCI, from the console! Simply run:
