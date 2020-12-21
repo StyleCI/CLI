@@ -4,7 +4,16 @@
 
 ## Installation
 
-The StyleCI CLI Tool requires [PHP](https://php.net) 7.2.5 or higher, and can be installed either by using [Composer](https://getcomposer.org/), or directly downloading the phar.
+The StyleCI CLI Tool requires [PHP](https://php.net) 7.2.5 or higher, and can be installed either by directly downloading the phar, or using [Composer](https://getcomposer.org/).
+
+### Download the Phar
+
+Global installation:
+
+```bash
+$ curl -SsLo styleci.phar https://github.com/StyleCI/CLI/releases/download/v0.9.3/styleci.phar \
+    && chmod +x styleci.phar && sudo mv styleci.phar /usr/local/bin/styleci
+```
 
 ### Require using Composer
 
@@ -18,15 +27,6 @@ Global installation:
 
 ```bash
 $ composer global require styleci/cli:^0.9
-```
-
-### Download the Phar
-
-Global installation:
-
-```bash
-$ curl -SsLo styleci.phar https://github.com/StyleCI/CLI/releases/download/v0.9.2/styleci.phar \
-    && chmod +x styleci.phar && sudo mv styleci.phar /usr/local/bin/styleci
 ```
 
 ## First Time Setup
